@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'LibreFranklin';
+    src: url(LibreFranklin-Regular.ttf);
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+    font-family: 'LibreFranklinLight';
+    src: url(LibreFranklin-Light.ttf);
+	font-style: normal;
+	font-weight: 200;
+}
+@font-face {
+    font-family: 'LibreFranklinExtraLight';
+    src: url(LibreFranklin-ExtraLight.ttf);
+	font-style: normal;
+	font-weight: 100;
+}

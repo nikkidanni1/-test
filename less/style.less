@@ -1,0 +1,44 @@
+@font-light: 1.250em 'LibreFranklinLight', sans-serif;
+@bgc: #F5F5F5;
+
+ul {
+  list-style: none;
+  margin: 0; 
+  padding-left: 0; 
+}
+a {
+	text-decoration: none;
+	color: #fff;
+	&:hover {
+		text-decoration: none;
+		color: #44B900;
+	}
+}
+main {
+	background-color: @bgc;
+}
+
+aside {
+	font: @font-light;
+	color: #fff;
+	background-color: #000;
+	height: 100%;
+	.logo {
+		padding: 18.506% 23.85% 14.256%;
+	}
+	.account {
+		text-align: center;
+		&__name {
+			padding: 13.125% 0 23.125%;
+		}
+	}
+	nav {
+		li {
+			padding: 4.219% 0 4.219% 12.5% ;
+			a {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+	}
+}
