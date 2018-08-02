@@ -14,11 +14,37 @@ a {
 		color: #44B900;
 	}
 }
-main {
-	background-color: @bgc;
+.row {
+	margin: 0;
+}
+.burgerMenu {
+	width: 44px;
+	height: 21px;
+	background-image: url('../icon/Burger menu.png');
+	position: absolute;
+	margin: 2.869% 5.595%;
 }
 
+main {
+	padding: 0 !important;
+	font: @font-light;
+	font-size: 2.250em;
+	background-color: @bgc;
+	.analytic {
+		padding: 2.421% 15.614%;
+		background-color: #fff;
+		&__title {
+			color: #44B900;
+		}
+	}
+}
+.menu-mover {
+	display: none; 
+}
 aside {
+    display: none;
+	position: absolute !important;
+	z-index: 1;
 	font: @font-light;
 	color: #fff;
 	background-color: #000;

@@ -8,12 +8,13 @@
 	</head>
 	<body>
 	<div class="row">
-		<aside class="col-2">
-			<div class="logo">
-				<img src="icon\Group 46.svg" alt="logo">
+		<div class="col-1 menu-mover" id="menu-mover"></div>
+		<aside id="menu" class="col-2">
+			<div id="logo" class="logo" onclick="openbox('menu', 'burgerMenu', 'menu-mover')">
+				<img src="icon/Group 46.svg" alt="logo">
 			</div>
 			<div class="account">
-				<img src="icon\Mask Group 7.png" alt="avatar" width="149">
+				<img src="icon/Mask Group 7.png" alt="avatar" width="149">
 				<p class="account__name">Admin</p>
 			</div>
 			<nav>
@@ -33,11 +34,14 @@
 			</nav>
 			
 		</aside>
-		<main class="col-10">
-			
+		<main class="col">
+			<div id="burgerMenu" class="burgerMenu" href="#" onclick="openbox('menu', 'burgerMenu', 'menu-mover')"></div>
+			<section class="analytic">
+				<h1 class="analytic__title">EY Analytics</h1>
+			</section>
 		</main>
 	</div>
-	
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
