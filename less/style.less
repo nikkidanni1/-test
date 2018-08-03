@@ -1,9 +1,10 @@
 @font-light: 'LibreFranklinLight', sans-serif;
 @font-regular: 'LibreFranklinLight', sans-serif;
+@font-extra-light: 'LibreFranklinExtraLight', sans-serif;
 @bgc: #F5F5F5;
 @description-color: #989898;
 @not-active-color: #E2E2E4;
-
+@name-color: #D5D5D5;
 
 ul {
   list-style: none;
@@ -156,7 +157,32 @@ main {
 	}
 	
 	/*-----------------------statistic-----------------------*/
-	.statistic {}
+	.statistic {
+		background-image: url('../img/Mask Group 5.png');
+		background-size: cover;
+		background-position: center;
+		height: 300px;
+		font-family: @font-extra-light;
+		&__gradient {
+			background: linear-gradient(0, #44B900, #414141);
+			opacity: 0.78;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&__block {
+			margin: 3.563%;
+		}
+		&__name {
+			color: @name-color;
+			font-size: 1.250em;
+		}
+		&__value {
+			color: #fff;
+			font-size: 2.813em;
+		}
+	}
 }
 .menu-mover {
 	display: none; 
@@ -173,6 +199,7 @@ aside {
 		padding: 18.506% 23.85% 14.256%;
 	}
 	.account {
+		color: @name-color;
 		text-align: center;
 		&__name {
 			padding: 13.125% 0 23.125%;
