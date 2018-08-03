@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 		<link rel="stylesheet" href="font/font.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/tcal.css">
 	</head>
 	<body>
 	<div class="row">
@@ -37,11 +38,48 @@
 		<main class="col">
 			<div id="burgerMenu" class="burgerMenu" href="#" onclick="openbox('menu', 'burgerMenu', 'menu-mover')"></div>
 			<section class="analytic">
-				<h1 class="analytic__title">EY Analytics</h1>
+				<div class="analytic__top-block">
+					<h1 class="analytic__title">EY Analytics</h1>
+					<div class="analytic__currency">
+						<div class="analytic__currency-icon">$</div>
+						<span>AUD</span>
+					</div>
+				</div>			
+				<form action="#">
+					<div class="analytic__selectors">
+						<select id="select1">
+							<option value=1>Use Agency Yield</option>
+						</select>
+						<select id="select2">
+							<option value=1>Australia Hearing</option>
+						</select>
+						<select id="select3">
+							<option value=1>All campaigns</option>
+						</select>
+						<select id="select4">
+							<option value=1>All layers</option>
+						</select>
+						<div class="analytic__date-block">
+							<input type="text" name="date" class="tcal" value="11/11/17" /><span>-</span>
+							<input type="text" name="date" class="tcal analytic__date" value="08/02/18" />
+						</div>
+					</div>
+					<div class="analytic__bottom-block">
+						<div class="analytic__checkboxes-block">
+							<label><div class="analytic__checkboximg" id="analyticCheckboximg1"><input id="analyticCheckbox1" type="checkbox" onclick="check(this, 'analyticCheckboximg1')"></div>	Use Agency Yield</label>
+							<label><div class="analytic__checkboximg" id="analyticCheckboximg2"><input id="analyticCheckbox2" type="checkbox" onclick="check(this, 'analyticCheckboximg2')"></div>	Conversion Breakdown</label>
+						</div>
+						<button>Export Excel</button>
+					</div>
+				</form>
+			</section>
+			<section class="statistic">
+			
 			</section>
 		</main>
 	</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script src="js/main.js"></script>
+		<script type="text/javascript" src="js/tcal.js"></script> 
 	</body>
 </html>

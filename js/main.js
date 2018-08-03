@@ -11,3 +11,15 @@
 	   document.getElementById(id3).style.display='none';
     }
 };
+function check(checkbox, id2) {
+	var checked = checkbox.checked;
+	if(checked) {
+		document.getElementById(id2).style.backgroundImage = "url('icon/Group 50.svg')";
+		checkbox.checked = true;
+		document.getElementById(id2).parentNode.style.color = "#989898";
+	} else {
+		document.getElementById(id2).style.backgroundImage = "url('icon/Rectangle 20.svg')";
+		checkbox.checked = false;
+		document.getElementById(id2).parentNode.style.color = "#DEDDDD";
+	}
+}

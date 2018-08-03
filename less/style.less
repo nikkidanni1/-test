@@ -1,5 +1,9 @@
-@font-light: 1.250em 'LibreFranklinLight', sans-serif;
+@font-light: 'LibreFranklinLight', sans-serif;
+@font-regular: 'LibreFranklinLight', sans-serif;
 @bgc: #F5F5F5;
+@description-color: #989898;
+@not-active-color: #E2E2E4;
+
 
 ul {
   list-style: none;
@@ -17,6 +21,15 @@ a {
 .row {
 	margin: 0;
 }
+[type="checkbox"] {
+	display: none;
+}
+button {
+	color: #fff;
+	padding: 17.44px 72.46px 17.92px 28.79px;
+	border: none;
+}
+
 .burgerMenu {
 	width: 44px;
 	height: 21px;
@@ -27,16 +40,123 @@ a {
 
 main {
 	padding: 0 !important;
-	font: @font-light;
-	font-size: 2.250em;
+	font-family: @font-light;
 	background-color: @bgc;
+	
+	/*-----------------------analytic-----------------------*/
 	.analytic {
-		padding: 2.421% 15.614%;
+		padding: 2.421% 15.614% 2.451%;
 		background-color: #fff;
 		&__title {
 			color: #44B900;
+			font-size: 2.250em;
+			width: 35%;
+		}
+		&__top-block {
+			display: flex;
+			justify-content: space-between;
+			font: 1.250em @font-regular;
+			span {
+				color: @description-color;
+			}
+		}
+		&__currency {
+			padding-top: 1.7%;
+		}
+		&__currency-icon {
+				color: #fff;
+				background-color: #44B900;
+				width: 30px;
+				height: 30px;
+				border-radius: 100%;
+				display: inline-block;
+				text-align: center;
+				padding: 3px 0;
+			}
+		&__selectors {
+			font-size: 1.250em;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 1.5% 0;
+			select {
+				/*for WebKit*/
+				-webkit-appearance: none;
+				/* for FF */
+				-moz-appearance: none;
+				text-indent: 0.01px; 
+				text-overflow: '';
+				/* for IE */
+				-ms-appearance: none;
+				appearance: none!important;
+				
+				color: @description-color;
+				border: none;
+				border-bottom: 1px solid @not-active-color;
+				padding: 1.165% 0;
+				width: 17%;
+				min-width: 185px;
+				
+				background-image: url('../icon/bottom-button.svg');
+				background-size: 10px;
+				background-position: 99% center;
+				background-repeat: no-repeat;
+			}
+		}
+		[type="text"] {
+			font-size: 0.944em;
+			border: none;
+			text-align: right;
+			color: @description-color;
+			width: 135px;
+		}
+		&__date {
+				background-image: url('../icon/calendar (1).svg');
+				background-size: 24.83px;
+				background-position: 99% center;
+				background-repeat: no-repeat;
+				width: 170px !important;
+				text-align: left !important;
+			}
+		.analytic__date-block {
+			border-bottom: 1px solid @not-active-color;
+			color: @description-color;
+			display: inline-block;
+			margin: 0;
+			padding: 1.165% 0;
+		}
+		&__bottom-block {
+			padding: 1.927% 0 1.77%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		&__checkboxes-block {
+			color: @not-active-color;
+			label {
+				min-width: 220px;
+				display: flex;
+				align-items: center;
+				margin: 0;
+			}
+		}
+		&__checkboximg {
+			background: url('../icon/Rectangle 20.svg') no-repeat;
+			display: inline-block;
+			width: 22.8px;
+			height: 22.8px;
+			margin: 4% 1.568%;			
+		}
+		button {
+			font-size: 1.250em;
+			background: url('../icon/Path 9.svg') no-repeat #44B900;
+			background-size: 24.34px 24.34px;
+			background-position: 85% 43%;
 		}
 	}
+	
+	/*-----------------------statistic-----------------------*/
+	.statistic {}
 }
 .menu-mover {
 	display: none; 
@@ -45,7 +165,7 @@ aside {
     display: none;
 	position: absolute !important;
 	z-index: 1;
-	font: @font-light;
+	font: 1.250em @font-light;
 	color: #fff;
 	background-color: #000;
 	height: 100%;
