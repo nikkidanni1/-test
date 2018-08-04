@@ -5,6 +5,7 @@
 @description-color: #989898;
 @not-active-color: #E2E2E4;
 @name-color: #D5D5D5;
+@title-color: #414141;
 
 ul {
   list-style: none;
@@ -29,6 +30,9 @@ button {
 	color: #fff;
 	padding: 17.44px 72.46px 17.92px 28.79px;
 	border: none;
+}
+label {
+	margin: 0;
 }
 
 .burgerMenu {
@@ -140,6 +144,12 @@ main {
 				align-items: center;
 				margin: 0;
 			}
+			#analyticCheckboximg1 {
+				background-image: url('../icon/Group 50.svg');
+			}
+			#analyticCheckboxLabel1 {
+				color: #989898;
+			}
 		}
 		&__checkboximg {
 			background: url('../icon/Rectangle 20.svg') no-repeat;
@@ -161,7 +171,6 @@ main {
 		background-image: url('../img/Mask Group 5.png');
 		background-size: cover;
 		background-position: center;
-		height: 300px;
 		font-family: @font-extra-light;
 		&__gradient {
 			background: linear-gradient(0, #44B900, #414141);
@@ -170,6 +179,7 @@ main {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			flex-wrap: wrap;
 		}
 		&__block {
 			margin: 3.563%;
@@ -181,9 +191,92 @@ main {
 		&__value {
 			color: #fff;
 			font-size: 2.813em;
+			padding: 0 0 8.394%;
 		}
 	}
 }
+/*---------table----------*/
+.table {
+	width: 68.465%;
+	background-color: #fff;
+	margin: 0 auto;
+	position: relative;
+	top: -3.07%;
+	box-shadow: 0 0 25px 3px rgba(0,0,0, 0.15);
+	&__inner {
+		padding: 3.013% 1.764% 3.706% 3.706%;
+	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title {
+		font-family: @font-light;
+		font-size: 1.25em;
+		color: @title-color;
+		padding: 0;
+		margin: 0;
+	}
+	&__checkbox-block {
+		display: flex;
+		justify-content: flex-end;
+		padding: 0;
+		margin: 0;
+		form {
+			width: 61.309%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+		label {
+			display: flex;
+			align-items: center;
+			color: @description-color;
+		}
+	}
+	&__checkboximg {
+		background: url('../icon/Rectangle 20.svg') no-repeat;
+		display: inline-block;
+		margin-right: 19px;
+		width: 22.8px;
+		height: 22.8px;
+	}
+	#tableCheckboximg1 {
+		background: url('../icon/Group 50.svg') no-repeat;
+	}
+	table {
+		width:100%;
+		border-color: @not-active-color;
+		margin-top: 1.206%;
+		th {
+			font: 1.125em @font-regular;
+			color: @title-color;
+			padding-top: 2.083%;
+			img {
+				margin: 0 0 0 15%;
+			}
+		}
+		td {
+			font: 1em @font-light;
+			color: #707070;
+			text-align: center;
+		}
+		tr:nth-child(odd) {
+			background: #fff;
+		}
+		tr:nth-child(even) {
+			background: @bgc;
+		}
+	}
+	&__name-line {
+		text-align: left !important;
+	}
+	&__first-column {
+		width: 13%;
+	}
+}
+
+/*---------aside----------*/
 .menu-mover {
 	display: none; 
 }

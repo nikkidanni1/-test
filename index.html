@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/tcal.css">
 	</head>
-	<body>
+	<body onload="addValueToTable()">
 	<div class="row">
 		<div class="col-lg-1 col-md-2  menu-mover" id="menu-mover"></div>
 		<aside id="menu" class="col-lg-2 col-md-3">
@@ -66,8 +66,8 @@
 					</div>
 					<div class="analytic__bottom-block">
 						<div class="analytic__checkboxes-block">
-							<label><div class="analytic__checkboximg" id="analyticCheckboximg1"><input id="analyticCheckbox1" type="checkbox" onclick="check(this, 'analyticCheckboximg1')"></div>	Use Agency Yield</label>
-							<label><div class="analytic__checkboximg" id="analyticCheckboximg2"><input id="analyticCheckbox2" type="checkbox" onclick="check(this, 'analyticCheckboximg2')"></div>	Conversion Breakdown</label>
+							<label id="analyticCheckboxLabel1"><div class="analytic__checkboximg" id="analyticCheckboximg1"><input id="analyticCheckbox1" type="checkbox" onclick="check(this, 'analyticCheckboximg1', '#989898', '#DEDDDD')" checked></div>	Use Agency Yield</label>
+							<label><div class="analytic__checkboximg" id="analyticCheckboximg2"><input id="analyticCheckbox2" type="checkbox" onclick="check(this, 'analyticCheckboximg2', '#989898', '#DEDDDD')"></div>	Conversion Breakdown</label>
 						</div>
 						<button>Export Excel</button>
 					</div>
@@ -75,11 +75,101 @@
 			</section>
 			<section class="statistic">
 				<div class="statistic__gradient container-fluid">
-					<div class="statistic__block"><p class="statistic__name">IMPRESSIONS</p><p class="statistic__value">1,475,298</p></div>
-					<div class="statistic__block"><p class="statistic__name">CLICKS</p><p class="statistic__value">13,935</p></div>
-					<div class="statistic__block"><p class="statistic__name">GOAL ACHIEVEMENT</p><p class="statistic__value">448%</p></div>
-					<div class="statistic__block"><p class="statistic__name">SPENT BUDGET</p><p class="statistic__value">$ 4,447</p></div>
+					<div class="statistic__block"><h2 class="statistic__name">IMPRESSIONS</p><p class="statistic__value">1,475,298</h2></div>
+					<div class="statistic__block"><h2 class="statistic__name">CLICKS</p><p class="statistic__value">13,935</h2></div>
+					<div class="statistic__block"><h2 class="statistic__name">GOAL ACHIEVEMENT</p><p class="statistic__value">448%</h2></div>
+					<div class="statistic__block"><h2 class="statistic__name">SPENT BUDGET</p><p class="statistic__value">$ 4,447</h2></div>
 				</div>
+			</section>
+			<section class="table">
+				<div class="table__inner">
+					<div class="table__header row">
+						<h2 class="table__title col-6">CAMPAIGNS</h2>
+						<div class="table__checkbox-block col-6">
+							<form action="#">
+								<label><div class="table__checkboximg" id="tableCheckboximg1"><input id="tableCheckbox1" type="checkbox" onclick="check(this, 'tableCheckboximg1', '#989898', '#989898')" checked></div>	CRM</label>
+								<label><div class="table__checkboximg" id="tableCheckboximg2"><input id="tableCheckbox2" type="checkbox" onclick="check(this, 'tableCheckboximg2', '#989898', '#989898')"></div>	CPC</label>
+								<label><div class="table__checkboximg" id="tableCheckboximg3"><input id="tableCheckbox3" type="checkbox" onclick="check(this, 'tableCheckboximg3', '#989898', '#989898')"></div>	CTR</label>
+								<img src="icon/Path 17.svg" alt="" width="18.49" height="17.7">
+							</form>	
+						</div>
+					</div>
+					<table id="table">
+						<tr>
+						  <th class="table__first-column">Campaign<img src="icon/bottom-button.svg" width="6.56"></th>
+						  <th>Impressions</th>
+						  <th>Clicks</th>
+						  <th>Conversions</th>
+						  <th>Spend</th>
+						  <th>Goal Achievement</th>
+						  <th>CPM</th>
+						  <th>CPC</th>
+						  <th>CTR</th>
+						  <th>Efficiency Score</th>
+						</tr>
+						<tr>
+						  <td class="table__name-line">Roger pen</td>
+						  <td>1,475,298</td>
+						  <td>13,935</td>
+						  <td>448%</td>
+						  <td>$ 4,447</td>
+						  <td>40%</td>
+						  <td>$2,36</td>
+						  <td>$2,36</td>
+						  <td>$2,36</td>
+						  <td><canvas id="tableCanvas1" width="154.71" height="25.34"></canvas></td>
+						</tr>
+						<tr>
+						  <td class="table__name-line">Roger pen</td>
+						  <td>1,475,298</td>
+						  <td>13,935</td>
+						  <td>448%</td>
+						  <td>$ 4,447</td>
+						  <td>40%</td>
+						  <td>$2,36</td>
+						  <td>$2,36</td>
+						  <td>$2,36</td>
+						  <td><canvas id="tableCanvas2" width="154.71" height="25.34"></canvas></td>
+						</tr>
+						<tr>
+						  <td class="table__name-line">Roger pen</td>
+						  <td>1,475,298</td>
+						  <td>13,935</td>
+						  <td>448%</td>
+						  <td>$ 4,447</td>
+						  <td>40%</td>
+						  <td>$2,36</td>
+						  <td>$2,36</td>
+						  <td>$2,36</td>
+						  <td><canvas id="tableCanvas3" width="154.71" height="25.34"></canvas></td>
+						</tr>
+						<tr>
+						  <td class="table__name-line">Roger pen</td>
+						  <td>1,475,298</td>
+						  <td>13,935</td>
+						  <td>448%</td>
+						  <td>$ 4,447</td>
+						  <td>40%</td>
+						  <td>$2,36</td>
+						  <td>$2,36</td>
+						  <td>$2,36</td>
+						  <td><canvas id="tableCanvas4" width="154.71" height="25.34"></canvas></td>
+						</tr>
+						<tr>
+						  <td class="table__name-line">Roger pen</td>
+						  <td>1,475,298</td>
+						  <td>13,935</td>
+						  <td>448%</td>
+						  <td>$ 4,447</td>
+						  <td>40%</td>
+						  <td>$2,36</td>
+						  <td>$2,36</td>
+						  <td>$2,36</td>
+						  <td><canvas id="tableCanvas5" width="154.71" height="25.34"></canvas></td>
+						</tr>
+					</table>
+				</div>
+				
 			</section>
 		</main>
 	</div>
