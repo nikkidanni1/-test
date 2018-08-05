@@ -81,8 +81,8 @@
 					<div class="statistic__block"><h2 class="statistic__name">SPENT BUDGET</p><p class="statistic__value">$ 4,447</h2></div>
 				</div>
 			</section>
-			<section class="table">
-				<div class="table__inner">
+			<section class="charts-section">
+				<section class="table chart-block">
 					<div class="table__header row">
 						<h2 class="table__title col-6">CAMPAIGNS</h2>
 						<div class="table__checkbox-block col-6">
@@ -132,28 +132,28 @@
 						  <td><canvas id="tableCanvas2" width="154.71" height="25.34"></canvas></td>
 						</tr>
 						<tr>
-						  <td class="table__name-line">Roger pen</td>
-						  <td>1,475,298</td>
-						  <td>13,935</td>
-						  <td>448%</td>
-						  <td>$ 4,447</td>
-						  <td>40%</td>
-						  <td>$2,36</td>
-						  <td>$2,36</td>
-						  <td>$2,36</td>
-						  <td><canvas id="tableCanvas3" width="154.71" height="25.34"></canvas></td>
+							<td class="table__name-line">Roger pen</td>
+							<td>1,475,298</td>
+							<td>13,935</td>
+							<td>448%</td>
+							<td>$ 4,447</td>
+							<td>40%</td>
+							<td>$2,36</td>
+							<td>$2,36</td>
+							<td>$2,36</td>
+							<td><canvas id="tableCanvas3" width="154.71" height="25.34"></canvas></td>
 						</tr>
 						<tr>
-						  <td class="table__name-line">Roger pen</td>
-						  <td>1,475,298</td>
-						  <td>13,935</td>
-						  <td>448%</td>
-						  <td>$ 4,447</td>
-						  <td>40%</td>
-						  <td>$2,36</td>
-						  <td>$2,36</td>
-						  <td>$2,36</td>
-						  <td><canvas id="tableCanvas4" width="154.71" height="25.34"></canvas></td>
+							<td class="table__name-line">Roger pen</td>
+							<td>1,475,298</td>
+							<td>13,935</td>
+							<td>448%</td>
+							<td>$ 4,447</td>
+							<td>40%</td>
+							<td>$2,36</td>
+							<td>$2,36</td>
+							<td>$2,36</td>
+							<td><canvas id="tableCanvas4" width="154.71" height="25.34"></canvas></td>
 						</tr>
 						<tr>
 						  <td class="table__name-line">Roger pen</td>
@@ -168,13 +168,25 @@
 						  <td><canvas id="tableCanvas5" width="154.71" height="25.34"></canvas></td>
 						</tr>
 					</table>
+				</section>
+				<div class="row">
+					<section class="col-7 chart-block chart1">
+						<div class="chart1__header">
+							<h2 class="chart1__title">CHANNEL PERFORMANCE<sup><img src="icon/Path 17.svg" width=13.97></sup></h2>
+							<select>
+								<option value=1>Conversions</option>
+							</select>
+						</div>
+						<canvas id="myChart" width="745.82" height="263.12"></canvas>
+						<div id='chartjsLegend' class='chart1__chartjsLegend'></div>
+					</section>
+					<section class="col chart-block"></section>
 				</div>
-				
 			</section>
 		</main>
 	</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 		<script src="js/main.js"></script>
-		<script type="text/javascript" src="js/tcal.js"></script> 
+		<script src="js/tcal.js"></script> 
 	</body>
 </html>
