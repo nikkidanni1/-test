@@ -58,7 +58,7 @@ function addValueToTable(idTable) {
 
 
 /*---------graph 1---------*/
-var ctx = document.getElementById("myChart").getContext('2d');
+var ctx = document.getElementById("chart1").getContext('2d');
 Chart.defaults.global.defaultFontColor = '#989898';
 Chart.defaults.global.defaultFontFamily = 'LibreFranklin';
 Chart.defaults.global.defaultFontSize = 20;
@@ -83,6 +83,12 @@ var myChart = new Chart(ctx, {
 			ticks: {
 				beginAtZero:true,
 				max: 4000,
+				callback: function(value, index, values) {
+					if (value >= 1000)
+                        return (value/1000) + 'K';
+					else return value;
+                    }
+
 			},
 			gridLines: {
 				display: true,
@@ -124,9 +130,77 @@ var myChart = new Chart(ctx, {
 		}
 	}
 });
+//Легенда для chart1
+document.getElementById('chart1Legend').innerHTML = myChart.generateLegend();
+var span = [document.getElementById('chart1Legend').firstChild.firstChild.firstChild, document.getElementById('chart1Legend').firstChild.lastChild.firstChild];
+span[0].style.backgroundColor = "#00B7F1";
+span[1].style.backgroundColor = "#F39C12";
 
-document.getElementById('chartjsLegend').innerHTML = myChart.generateLegend();
-var span = [document.getElementById('chartjsLegend').firstChild.firstChild.firstChild, document.getElementById('chartjsLegend').firstChild.lastChild.firstChild];
-span[0].style.backgroundColor = "rgb(0,183,241)";
-span[1].style.backgroundColor = "rgb(243,156,18)";
-							
+/*---------graph 2---------*/
+ctx = document.getElementById("chart2").getContext('2d');	
+ctx.canvas.width = 315;
+ctx.canvas.height = 315;
+var myChart2 = new Chart(ctx, {
+    type:'doughnut',
+    data: {
+    datasets: [{
+        data: [79, 21],
+		backgroundColor: ["rgba(0,183,241, 0.49)", "rgba(68,185,0, 0.49)"],
+    }],
+    labels: [
+        'Social',
+        'Video'
+    ],
+	},
+	options: {
+        responsive: false,
+		elements: { 
+			arc: { 
+				borderWidth: 0, 
+			},
+		},
+		cutoutPercentage: 70,
+		legend: {
+			display: false,
+		},
+    },
+});
+
+//Значение внутри doughnut
+Chart.pluginService.register({
+  beforeDraw: function(chart) {
+    var width = chart.chart.width,
+        height = chart.chart.height,
+        ctx = chart.chart.ctx,
+        type = chart.config.type;
+
+    if (type == 'doughnut')	{
+    	var percent = Math.round((chart.config.data.datasets[0].data[0] * 100) /
+                    (chart.config.data.datasets[0].data[0] +
+                    chart.config.data.datasets[0].data[1]));
+			var oldFill = ctx.fillStyle;
+      var fontSize = ((height - chart.chartArea.top) / 100).toFixed(2);
+      
+      ctx.restore();
+      ctx.font = "67px 'LibreFranklinThin', sans-serif";
+      ctx.textBaseline = "middle"
+
+      var text = percent + "%",
+          textX = Math.round((width - ctx.measureText(text).width) / 2),
+          textY = (height + chart.chartArea.top) / 2;
+			
+      ctx.fillStyle = "#414141";
+      ctx.fillText(text, textX, textY-10);
+      ctx.font = "20px 'LibreFranklin', sans-serif";
+	  ctx.fillStyle = "#989898";
+	  text = 'Conversions';
+	  ctx.fillText(text, textX+10, textY+40);
+      ctx.save();
+    }
+  }
+});
+//Легенда для chart2
+document.getElementById('chart2Legend').innerHTML = myChart2.generateLegend();
+var span = [document.getElementById('chart2Legend').firstChild.firstChild.firstChild, document.getElementById('chart2Legend').firstChild.lastChild.firstChild];
+span[0].style.backgroundColor = "#00B7F1";
+span[1].style.backgroundColor = "#44B900";		

@@ -8,11 +8,17 @@
     font-family: 'LibreFranklinLight';
     src: url(LibreFranklin-Light.ttf);
 	font-style: normal;
-	font-weight: 200;
+	font-weight: 300;
 }
 @font-face {
     font-family: 'LibreFranklinExtraLight';
     src: url(LibreFranklin-ExtraLight.ttf);
 	font-style: normal;
 	font-weight: 100;
+}
+@font-face {
+	font-family: 'LibreFranklinThin';
+	src: url(LibreFranklin-Thin.ttf);
+	font-style: normal;
+	font-weight: 200;
 }

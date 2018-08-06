@@ -38,10 +38,47 @@ button {
 label {
 	margin: 0;
 }
+canvas {
+	margin: 0 auto;
+}
 .chart-block {
-	padding: 2.08% 1.255% 2.838% 1.208%;
+	padding: 50.27px 45.57px 49.61px 35.8px;
 	box-shadow: 0 0 25px 3px rgba(0,0,0, 0.15);
 	background-color: #fff;
+	
+	&__header {
+		border-bottom: 1px solid @not-active-color;
+		margin-bottom: 8%;
+		padding-bottom: 19.5px;
+		display: flex;
+		justify-content: space-between;
+
+	}
+	&__title {
+		display: inline-block;
+	}
+	select {
+		border: 1px solid #44B900;
+		border-radius: 30px;
+		color: #44B900;
+		padding: 7.54px 26.3px 7.46px 21.67px; 
+		margin-bottom: 0.5%;
+		
+		/*for WebKit*/
+		-webkit-appearance: none;
+		/* for FF */
+		-moz-appearance: none;
+		text-indent: 0.01px; 
+		text-overflow: '';
+		/* for IE */
+		-ms-appearance: none;
+		appearance: none!important;
+		
+		background-image: url('../icon/bottom-button-green.svg');
+		background-size: 10px;
+		background-position: 122px center;
+		background-repeat: no-repeat;
+	}
 }
 h2 {
 	color: #707070;
@@ -292,24 +329,7 @@ main {
 .chart1 {
 	margin-right: 0.938%;
 	padding: 3.511% 3.183% 3.264% 2.767%;
-	&__header {
-		border-bottom: 1px solid @not-active-color;
-		margin-bottom: 8%;
-		padding-bottom: 1.5%;
-		display: flex;
-		justify-content: space-between;
-
-	}
-	&__title {
-		display: inline-block;
-	}
-	select {
-		border: 1px solid #44B900;
-		border-radius: 15px;
-		color: #44B900;
-		padding: 1% 1.5%; 
-		margin-bottom: 0.5%;
-	}
+	
 	&__chartjsLegend {
 		margin: 0 auto;
 		width: 40%;
@@ -333,7 +353,30 @@ main {
 		border-radius: 100%;
 	}
 }
-
+.chart2 {
+	&__chartjsLegend {
+		margin: 0 auto;
+		width: 50%;
+		padding-top: 6%;
+	}
+	&__chartjsLegend ul {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__chartjsLegend li {
+		font-size: 1.25em;
+		color: @description-color;
+		display: inline-block;
+	}
+	&__chartjsLegend li span {
+		
+		display: inline-block;
+		width: 20.12px;
+		height: 20.12px;
+		margin-right: 17.4px;
+		border-radius: 100%;
+	}
+}
 /*---------aside----------*/
 .menu-mover {
 	display: none; 
