@@ -237,3 +237,80 @@ Chart.pluginService.register({
     }
   }
 });
+
+/*---------graph 4---------*/
+ctx = document.getElementById("chart4").getContext('2d');	
+ctx.canvas.width = 650;
+ctx.canvas.height = 252.12;
+var myChart4 = new Chart(ctx, {
+    type: 'horizontalBar',
+	data: {
+		labels: ["Video", "Social", "Social"],
+		datasets: [{
+		label: 'Conversions',
+		data: [3250, 2000, 0],
+		backgroundColor: 'rgba(68,185,0, 0.49)',
+		}, 
+		{
+		label: 'Conversions',
+		data: [0, 0, 2120],
+		backgroundColor: 'rgba(0,183,241, 0.49)',
+	}]
+	},
+	options: {
+		responsive: false,
+		scales: {
+			xAxes: [{
+				ticks: {
+					beginAtZero:true,
+					max: 4000,
+					callback: function(value, index, values) {
+						if (value >= 1000)
+							return (value/1000) + 'K';
+						else return value;
+					}
+				},
+				gridLines: {
+					display: true,
+					color: 'rgba(237,237,237,1)'
+				},
+				color: '#707070'
+			}],
+			yAxes:[{
+				stacked: true,
+				gridLines: {
+					display: false
+				},
+				categoryPercentage: 0.6,
+				barPercentage: 1,
+				color: '#707070'
+			}]
+		},  legend: {
+			display: false,
+		},
+		animation: {
+			onComplete: function () {
+				var chartInstance = this.chart,
+				ctx = chartInstance.ctx;
+				ctx.font = Chart.helpers.fontString(30, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+				ctx.textAlign = 'top';
+				ctx.textBaseline = 'middle';
+				ctx.fillStyle = '#BBB';
+
+
+				this.data.datasets.forEach(function (dataset, i) {
+					var meta = chartInstance.controller.getDatasetMeta(i);
+					meta.data.forEach(function (bar, index) {
+						var data = dataset.data[index];                            
+						ctx.fillText(data, bar._model.x - 100, bar._model.y);
+					});
+				});
+			}
+		}
+	}
+});
+//Легенда для chart4
+document.getElementById('chart4Legend').innerHTML = myChart4.generateLegend();
+var span = [document.getElementById('chart4Legend').firstChild.firstChild.firstChild, document.getElementById('chart4Legend').firstChild.lastChild.firstChild];
+span[0].style.backgroundColor = "#44B900";
+span[1].style.backgroundColor = "#00B7F1";	

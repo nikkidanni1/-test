@@ -37,6 +37,7 @@ button {
 }
 label {
 	margin: 0;
+	padding: 0;
 }
 canvas {
 	margin: 0 auto;
@@ -94,7 +95,7 @@ sup {
 	height: 21px;
 	background-image: url('../icon/Burger menu.png');
 	position: absolute;
-	margin: 2.869% 5.595%;
+	margin: 3.25% 4.75%;
 }
 
 main {
@@ -104,7 +105,7 @@ main {
 	
 	/*-----------------------analytic-----------------------*/
 	.analytic {
-		padding: 2.421% 15.614% 2.451%;
+		padding: 2.421% 10% 2.451%;
 		background-color: #fff;
 		&__title {
 			color: #44B900;
@@ -250,7 +251,7 @@ main {
 		}
 	}
 	.charts-section {
-		width: 70%;
+		width: 85%;
 		margin: 0 auto;
 		position: relative;
 		top: -3.07%;
@@ -325,94 +326,120 @@ main {
 			width: 13%;
 		}
 	}
+	/*-------------charts-----------*/
+	.block-with-two-charts {
+		margin: 60px 0;
+	}
+	/*------------chart1------------*/
+	.chart1 {
+		margin-right: 0.938%;
+		&__chart {
+			position: absolute;
+			bottom: 49.61px;
+		}
+		&__chartjsLegend {
+			margin: 0 auto;
+			width: 40%;
+			padding-top: 60px;
+		}
+		&__chartjsLegend ul {
+			display: flex;
+			justify-content: space-between;
+		}
+		&__chartjsLegend li {
+			font-size: 1.25em;
+			color: @description-color;
+			display: inline-block;
+		}
+		&__chartjsLegend li span {
+			display: inline-block;
+			width: 20.12px;
+			height: 20.12px;
+			margin-right: 17.4px;
+			border-radius: 100%;
+		}
+	}
+	/*------------chart2------------*/
+	.chart2 {
+		&__chartjsLegend {
+			margin: 0 auto;
+			width: 50%;
+			padding-top: 55px;
+		}
+		&__chartjsLegend ul {
+			display: flex;
+			justify-content: space-between;
+		}
+		&__chartjsLegend li {
+			font-size: 1.25em;
+			color: @description-color;
+			display: inline-block;
+		}
+		&__chartjsLegend li span {
+			
+			display: inline-block;
+			width: 20.12px;
+			height: 20.12px;
+			margin-right: 17.4px;
+			border-radius: 100%;
+		}
+	}
+	/*------------chart3------------*/
+	.chart3 {
+		margin-right: 0.938%;
+		&__chartjsLegend {
+			margin: 0 auto;
+			width: 50%;
+			padding-top: 55px;
+		}
+		&__chartjsLegend ul {
+			display: flex;
+			justify-content: space-between;
+		}
+		&__chartjsLegend li {
+			font-size: 1.25em;
+			color: @description-color;
+			display: inline-block;
+		}
+		&__chartjsLegend li span {
+			
+			display: inline-block;
+			width: 20.12px;
+			height: 20.12px;
+			margin-right: 17.4px;
+			border-radius: 100%;
+		}
+	}
+	/*------------chart4------------*/
+	.chart4 {
+		&__chartjsLegend {
+			margin: 0 auto;
+			width: 50%;
+			padding-top: 55px;
+		}
+		&__chartjsLegend ul {
+			display: flex;
+			justify-content: space-between;
+		}
+		&__chartjsLegend li {
+			font-size: 1.25em;
+			color: @description-color;
+			display: inline-block;
+		}
+		&__chartjsLegend li span {
+			
+			display: inline-block;
+			width: 20.12px;
+			height: 20.12px;
+			margin-right: 17.4px;
+			border-radius: 100%;
+		}
+	}
 }
-/*-------------charts-----------*/
-.block-with-two-charts {
-	margin: 60px 0;
-}
-/*------------chart1------------*/
-.chart1 {
-	margin-right: 0.938%;
-	&__chart {
-		position: absolute;
-		bottom: 49.61px;
-	}
-	&__chartjsLegend {
-		margin: 0 auto;
-		width: 40%;
-		padding-top: 60px;
-	}
-	&__chartjsLegend ul {
-		display: flex;
-		justify-content: space-between;
-	}
-	&__chartjsLegend li {
-		font-size: 1.25em;
-		color: @description-color;
-		display: inline-block;
-	}
-	&__chartjsLegend li span {
-		display: inline-block;
-		width: 20.12px;
-		height: 20.12px;
-		margin-right: 17.4px;
-		border-radius: 100%;
-	}
-}
-/*------------chart1------------*/
-.chart2 {
-	&__chartjsLegend {
-		margin: 0 auto;
-		width: 50%;
-		padding-top: 55px;
-	}
-	&__chartjsLegend ul {
-		display: flex;
-		justify-content: space-between;
-	}
-	&__chartjsLegend li {
-		font-size: 1.25em;
-		color: @description-color;
-		display: inline-block;
-	}
-	&__chartjsLegend li span {
-		
-		display: inline-block;
-		width: 20.12px;
-		height: 20.12px;
-		margin-right: 17.4px;
-		border-radius: 100%;
-	}
-}
-/*------------chart3------------*/
-.chart3 {
-	margin-right: 0.938%;
-	&__chartjsLegend {
-		margin: 0 auto;
-		width: 50%;
-		padding-top: 55px;
-	}
-	&__chartjsLegend ul {
-		display: flex;
-		justify-content: space-between;
-	}
-	&__chartjsLegend li {
-		font-size: 1.25em;
-		color: @description-color;
-		display: inline-block;
-	}
-	&__chartjsLegend li span {
-		
-		display: inline-block;
-		width: 20.12px;
-		height: 20.12px;
-		margin-right: 17.4px;
-		border-radius: 100%;
-	}
-}
+
 /*---------aside----------*/
 .menu-mover {
-	display: none; 
+	display: none;
 }
 aside {
     display: none;
