@@ -228,6 +228,7 @@ main {
 		font-family: @font-extra-light;
 		&__gradient {
 			background: linear-gradient(0, #44B900, #414141);
+			padding:  6.313% 0 8.25%;
 			opacity: 0.78;
 			height: 100%;
 			display: flex;
@@ -325,15 +326,45 @@ main {
 		}
 	}
 }
+/*-------------charts-----------*/
+.block-with-two-charts {
+	margin: 60px 0;
+}
 /*------------chart1------------*/
 .chart1 {
 	margin-right: 0.938%;
-	padding: 3.511% 3.183% 3.264% 2.767%;
-	
+	&__chart {
+		position: absolute;
+		bottom: 49.61px;
+	}
 	&__chartjsLegend {
 		margin: 0 auto;
 		width: 40%;
-		padding-top: 6%;
+		padding-top: 60px;
+	}
+	&__chartjsLegend ul {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__chartjsLegend li {
+		font-size: 1.25em;
+		color: @description-color;
+		display: inline-block;
+	}
+	&__chartjsLegend li span {
+		display: inline-block;
+		width: 20.12px;
+		height: 20.12px;
+		margin-right: 17.4px;
+		border-radius: 100%;
+	}
+}
+/*------------chart1------------*/
+.chart2 {
+	&__chartjsLegend {
+		margin: 0 auto;
+		width: 50%;
+		padding-top: 55px;
 	}
 	&__chartjsLegend ul {
 		display: flex;
@@ -353,11 +384,13 @@ main {
 		border-radius: 100%;
 	}
 }
-.chart2 {
+/*------------chart3------------*/
+.chart3 {
+	margin-right: 0.938%;
 	&__chartjsLegend {
 		margin: 0 auto;
 		width: 50%;
-		padding-top: 6%;
+		padding-top: 55px;
 	}
 	&__chartjsLegend ul {
 		display: flex;

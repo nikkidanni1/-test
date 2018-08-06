@@ -169,7 +169,7 @@
 						</tr>
 					</table>
 				</section>
-				<div class="row">
+				<div class="row block-with-two-charts">
 					<section class="col-7 chart-block chart1">
 						<div class="chart-block__header">
 							<h2 class="chart-block__title">CHANNEL PERFORMANCE<sup><img src="icon/Path 17.svg" width=13.97></sup></h2>
@@ -177,8 +177,11 @@
 								<option value=1>Conversions</option>
 							</select>
 						</div>
-						<canvas id="chart1" width="745.82" height="263.12"></canvas>
-						<div id='chart1Legend' class='chart1__chartjsLegend'></div>
+						<div class="chart1__chart">
+							<canvas id="chart1" width="745.82" height="263.12"></canvas>
+							<div id='chart1Legend' class='chart1__chartjsLegend'></div>					
+						</div>
+						
 					</section>
 					<section class="col chart-block chart2">
 						<div class="chart-block__header">
@@ -187,9 +190,34 @@
 								<option value=1>Conversions</option>
 							</select>
 						</div>
-						<canvas id="chart2" width="315" height="315"></canvas>
-						<div id='chart2Legend' class='chart2__chartjsLegend'></div>
-
+						<div class="chart2__chart">
+							<canvas id="chart2" width="315" height="315"></canvas>
+							<div id='chart2Legend' class='chart2__chartjsLegend'></div>
+						</div>
+					</section>
+				</div>
+				<div class="row block-with-two-charts">
+					<section class="col-5 chart-block chart3">
+						<div class="chart-block__header">
+							<h2 class="chart-block__title">NEW VS. RETURNING<sup><img src="icon/Path 17.svg" width=13.97></sup></h2>
+							<select>
+								<option value=1>Conversions</option>
+							</select>
+						</div>
+						<canvas id="chart3" width="260.76" height="260.76"></canvas>
+						<div id='chart3Legend' class='chart3__chartjsLegend'></div>
+					</section>
+					<section class="col chart-block chart4">
+						<div class="chart-block__header">
+							<h2 class="chart-block__title">CHANNEL PERFORMANCE<sup><img src="icon/Path 17.svg" width=13.97></sup></h2>
+							<select>
+								<option value=1>Conversions</option>
+							</select>
+						</div>
+						<div class="chart4__chart">
+							<canvas id="chart4" width="260.76" height="260.76"></canvas>
+							<div id='chart4Legend' class='chart4__chartjsLegend'></div>
+						</div>					
 					</section>
 				</div>
 			</section>
