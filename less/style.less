@@ -77,7 +77,7 @@ canvas {
 		
 		background-image: url('../icon/bottom-button-green.svg');
 		background-size: 10px;
-		background-position: 122px center;
+		background-position: 92% center;
 		background-repeat: no-repeat;
 	}
 }
@@ -435,7 +435,43 @@ main {
 			border-radius: 100%;
 		}
 	}
+	
+	/*------------chart5------------*/
+	.chart5 {
+		&__selectors {
+			width: 50%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			span {
+				padding: 0 3%;
+			}
+		}
+		&__chartjsLegend {
+			margin: 0 auto;
+			width: 30%;
+			padding-top: 55px;
+		}
+		&__chartjsLegend ul {
+			display: flex;
+			justify-content: space-between;
+		}
+		&__chartjsLegend li {
+			font-size: 1.25em;
+			color: @description-color;
+			display: inline-block;
+		}
+		&__chartjsLegend li span {
+			
+			display: inline-block;
+			width: 20.12px;
+			height: 20.12px;
+			margin-right: 17.4px;
+			border-radius: 100%;
+		}
+	}
 }
+
 
 /*---------aside----------*/
 .menu-mover {

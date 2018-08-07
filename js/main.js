@@ -121,8 +121,9 @@ var myChart = new Chart(ctx, {
 				this.data.datasets.forEach(function (dataset, i) {
 					var meta = chartInstance.controller.getDatasetMeta(i);
 					meta.data.forEach(function (bar, index) {
-						var data = dataset.data[index];                            
-						ctx.fillText(data, bar._model.x - 100, bar._model.y);
+						var data = dataset.data[index];
+						if (i !== 1 )
+							ctx.fillText(data, bar._model.x + 10, bar._model.y);					
 					});
 				});
 			}
@@ -301,8 +302,11 @@ var myChart4 = new Chart(ctx, {
 				this.data.datasets.forEach(function (dataset, i) {
 					var meta = chartInstance.controller.getDatasetMeta(i);
 					meta.data.forEach(function (bar, index) {
-						var data = dataset.data[index];                            
-						ctx.fillText(data, bar._model.x - 100, bar._model.y);
+						var data = dataset.data[index];  
+						if ((i === 1) && (index === 2 ))
+							ctx.fillText(data, bar._model.x + 10, bar._model.y);
+						if ((i === 0) && (index !== 2 ))
+							ctx.fillText(data, bar._model.x + 10, bar._model.y);
 					});
 				});
 			}
@@ -314,3 +318,107 @@ document.getElementById('chart4Legend').innerHTML = myChart4.generateLegend();
 var span = [document.getElementById('chart4Legend').firstChild.firstChild.firstChild, document.getElementById('chart4Legend').firstChild.lastChild.firstChild];
 span[0].style.backgroundColor = "#44B900";
 span[1].style.backgroundColor = "#00B7F1";	
+
+/*---------graph 5---------*/
+ctx = document.getElementById("chart5").getContext('2d');	
+Chart.defaults.global.defaultFontFamily = "LibreFranklinExtraLight";
+var myChart5 = new Chart(ctx, {
+    type: 'line',
+	data: {
+		labels: ["10 Jan 18", "10 Jan 18", "10 Jan 18", "10 Jan 18", "10 Jan 18", "10 Jan 18", "10 Jan 18", "10 Jan 18", "10 Jan 18", "10 Jan 18",],
+		datasets: [{
+			type: 'bar',
+			label: 'Conversions',
+			yAxisID: 'b',
+			data: [0, 225, 225, 225, 225, 225, 225, 225, 225, 225, 225],
+			backgroundColor: 'rgba(0,183,241, 0.15)',
+		}, 
+		{	
+			type: 'bar',
+			yAxisID: 'b',
+			label: '',
+			data: [0, 210, 210, 210, 210, 210, 210, 210, 210],
+			backgroundColor: 'rgba(0,183,241, 0.15)',
+		}, 
+		{
+			type: 'bar',
+			yAxisID: 'b',
+			label: '',
+			data: [250, 230, 230, 230, 230, 230, 230, 230, 230, 230],
+			backgroundColor: 'rgba(0,183,241, 0.15)',
+		},
+		{
+			yAxisID: 'l',
+			type: 'line',
+			label: 'Conversions',
+			data: [1000, 1050, 850, 1300, 1000, 1000, 1200, 1010, 650, 700],
+			backgroundColor: 'rgba(0,183,241, 0)',
+			borderWidth: 3,
+			borderColor: '#44B900',
+			pointRadius: 0
+		},
+		]
+	},
+	options: {
+		responsive: false,
+		scales: {
+			xAxes: [{
+				ticks: {
+					fontSize: 16
+				},
+				gridLines: {
+					display: false
+				},
+				color: '#707070',
+				categoryPercentage: 1,
+				barPercentage: 0.8,
+			}],
+			yAxes:[{
+				id: 'b',
+				position: 'right',
+				ticks: {
+					fontColor: "#00B7F1",
+                    fontSize: 20,
+					stepSize: 100,
+					beginAtZero:true,
+					max: 300,
+				},
+				gridLines: {
+					display: true,
+					color: 'rgba(237,237,237,1)'
+				},
+				color: '#707070'
+			},
+			{
+				id: 'l',
+				position: 'left',
+				ticks: {
+					fontColor: "#44B900",
+                    fontSize: 20,
+					stepSize: 500,
+					beginAtZero:true,
+					max: 1500,
+					callback: function(value, index, values) {
+						if (value >= 1000)
+							return (value/1000) + 'K';
+						else return value;
+					}
+				},
+				gridLines: {
+					display: true,
+					color: 'rgba(237,237,237,1)'
+				},
+				color: '#44B900'
+			}]
+		},  legend: {
+			display: false,
+		}
+	}
+});
+//Легенда для chart5
+document.getElementById('chart5Legend').innerHTML = myChart5.generateLegend();
+var span = [document.getElementById('chart5Legend').firstChild.firstChild.firstChild, document.getElementById('chart5Legend').firstChild.lastChild.firstChild];
+span[0].style.backgroundColor = "#44B900";
+span[1].style.backgroundColor = "#00B7F1";
+span[0].parentNode.nextSibling.style.display = 'none';
+span[0].parentNode.nextSibling.nextSibling.style.display = 'none';
